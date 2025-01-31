@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xn4pgum2y-nodejs-gitops
+  description: This is GitOps manifest for xn4pgum2y-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: xn4pgum2y-nodejs
+    backstage.io/kubernetes-id: xn4pgum2y-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: xn4pgum2y-nodejs   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xn4pgum2y-nodejs
